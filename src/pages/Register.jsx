@@ -24,7 +24,8 @@ import { Link, useNavigate } from "react-router-dom";
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ firstname, lastname, email, password })
+          body: JSON.stringify({ firstname, lastname, email, password }),
+          
         }
         const response = await fetch("http://localhost:3000/register", option);
         // console.log(response);
