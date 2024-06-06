@@ -26,7 +26,7 @@
           body: JSON.stringify({ firstname, lastname, email, password }),
           
         }
-        const response = await fetch("https://todo-be-peach.vercel.app/register", option);
+        const response = await fetch("http://localhost:3000/register", option);
         // console.log(response);
         if (response.ok) {  
           navigate('/dashboard');
