@@ -24,7 +24,7 @@
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({ firstname, lastname, email, password }),
-          cors: no-cors
+          
         }
         const response = await fetch("https://todo-be-peach.vercel.app/register", option);
         // console.log(response);
