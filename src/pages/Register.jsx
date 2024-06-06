@@ -28,7 +28,7 @@ import { Link, useNavigate } from "react-router-dom";
          
         }
         const response = await fetch("https://todo-fe-mu.vercel.app/register", option);
-        // console.log(response);
+        console.log(response);
         if (response.ok) {  
           navigate('/dashboard');
         }
