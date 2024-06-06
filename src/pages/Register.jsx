@@ -25,10 +25,10 @@ import { Link, useNavigate } from "react-router-dom";
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({ firstname, lastname, email, password }),
-          mode: 'no-cors', 
+         
         }
-        const response = await fetch("https://todo-be-peach.vercel.app/register", option);
-        // console.log(response);
+        const response = await fetch("https://todo-fe-mu.vercel.app/register", option);
+        console.log(response);
         if (response.ok) {  
           navigate('/dashboard');
         }

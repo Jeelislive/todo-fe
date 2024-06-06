@@ -18,7 +18,7 @@ const Login = () => {
         },
         body: JSON.stringify({ email, password }),
       }
-      const response = await fetch('http://localhost:3000/login', option);
+      const response = await fetch('https://todo-fe-mu.vercel.app/login', option);
       if (response.ok) {
         navigate('/dashboard');
       } else {
