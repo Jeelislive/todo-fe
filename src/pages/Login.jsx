@@ -18,7 +18,9 @@ const Login = () => {
         },
         body: JSON.stringify({ email, password }),
       }
-      const response = await fetch('/api/login', option);
+      const baseUrl = process.env.NODE_ENV === 'production' ? 'https://todo-be-peach.vercel.app' : '';
+
+    const response = await fetch(`${baseUrl}/api/login`, option);
       if (response.ok) {
         navigate('/dashboard');
       } else {
