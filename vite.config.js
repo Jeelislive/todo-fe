@@ -11,5 +11,4 @@ export default defineConfig({
     },
   },
   plugins: [ react() ],
-  base: 'https://todo-fe-mu.vercel.app',
 })
