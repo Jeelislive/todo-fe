@@ -26,9 +26,9 @@ import { Link, useNavigate } from "react-router-dom";
           },
           body: JSON.stringify({ firstname, lastname, email, password }),
         }
-     
+     const baseUrl = process.env.NODE_ENV === 'production' ? 'https://todo-be-peach.vercel.app' : '';
 
-    const response = await fetch(`${import.meta.env.BASE_URL}api/register`, option);
+    const response = await fetch(`${baseUrl}/api/register`, option);
         console.log(response);
         if (response.ok) {  
           navigate('/dashboard');
