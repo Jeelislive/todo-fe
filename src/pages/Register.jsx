@@ -25,9 +25,8 @@ import { Link, useNavigate } from "react-router-dom";
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({ firstname, lastname, email, password }),
-         
         }
-        const response = await fetch("https://todo-fe-mu.vercel.app/register", option);
+        const response = await fetch("/api/register", option);
         console.log(response);
         if (response.ok) {  
           navigate('/dashboard');

@@ -8,7 +8,7 @@ const Logout = () => {
 
     const handleLogout = async () => {
         try {
-            const response = await fetch('https://todo-fe-mu.vercel.app/logout', {
+            const response = await fetch('/api/logout', {
                 method: 'GET', 
                 credentials: 'include'
             });
