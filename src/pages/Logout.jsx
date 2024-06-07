@@ -8,7 +8,8 @@ const Logout = () => {
 
     const handleLogout = async () => {
         try {
-            const response = await fetch('/api/logout', {
+            const baseUrl = process.env.NODE_ENV === 'production' ? 'https://todo-be-peach.vercel.app' : '';
+            const response = await fetch('${baseUrl}/api/register', {
                 method: 'GET', 
                 credentials: 'include'
             });
