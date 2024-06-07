@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logout from '../pages/Logout'; 
+import Logout from '../pages/Logout';
 
 function Navbar() {
   const location = useLocation();
@@ -14,20 +14,23 @@ function Navbar() {
               {/* Add any logo or branding here if needed */ }
             </div>
             <div>
-              
-              <Link
-                to='/register'
-                className={ `text-white px-4 py-2 rounded ${ location.pathname === '/register' ? 'bg-gray-700' : 'hover:bg-gray-700' }` }
-              >
-                Register
-              </Link>
-              <Link
-                to='/login'
-                className={ `text-white px-4 py-2 rounded ${ location.pathname === '/login' ? 'bg-gray-700' : 'hover:bg-gray-700' }` }
-              >
-                Login
-              </Link>
-              { location.pathname === '/dashboard' && <Logout /> } 
+              { location.pathname !== '/dashboard' && (
+                <>
+                  <Link
+                    to='/register'
+                    className={ `text-white px-4 py-2 rounded ${ location.pathname === '/register' ? 'bg-gray-700' : 'hover:bg-gray-700' }` }
+                  >
+                    Register
+                  </Link>
+                  <Link
+                    to='/login'
+                    className={ `text-white px-4 py-2 rounded ${ location.pathname === '/login' ? 'bg-gray-700' : 'hover:bg-gray-700' }` }
+                  >
+                    Login
+                  </Link>
+                </>
+              ) }
+              { location.pathname === '/dashboard' && <Logout /> }
             </div>
           </div>
         </div>
